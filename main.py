@@ -5,6 +5,7 @@ import flask_sqlalchemy
 from _01_simple import app
 from _02_html_inside_view import app
 from _03_template_str_inside_view import app
+from _04_template_outside_view import app
 
 
 if __name__ == "__main__":
