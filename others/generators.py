@@ -7,12 +7,13 @@ class DistributeurDeCapote():
             yield "capote"
 
 
-def creerGenerateur() :
+def creerGenerateur():
     mylist = range(3)
     for i in mylist:
         yield i*i
-generateur = creerGenerateur()
 
+
+generateur = creerGenerateur()
 print(generateur.__next__())
 print(generateur.__next__())
 print(generateur.__next__())
@@ -21,8 +22,8 @@ print(generateur.__next__())
 distributeur_en_bas_de_la_rue = DistributeurDeCapote()
 distribuer = distributeur_en_bas_de_la_rue.allumer()
 
-for c in distribuer :
-    print (c)
+for c in distribuer:
+    print(c)
     break
 
 print("1--------")
@@ -30,7 +31,7 @@ d = DistributeurDeCapote().allumer()
 generateur = itertools.chain("13245", d)
 generateur = itertools.islice(generateur, 0, 12)
 for x in generateur:
-    print (x)
+    print(x)
 
 
 print("2--------")
